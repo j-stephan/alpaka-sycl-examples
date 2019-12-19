@@ -166,6 +166,9 @@ auto main()
     // Copy back the result
     alpaka::mem::view::copy(queue, bufHostC, bufAccC, extent);
 
+    // Synchronize
+    alpaka::wait::wait(queue);
+
     bool resultCorrect(true);
     for(Idx i(0u);
         i < numElements;
@@ -175,7 +178,7 @@ auto main()
         Data const correctResult(pBufHostA[i] + pBufHostB[i]);
         if(val != correctResult)
         {
-            std::cerr << "C[" << i << "] == " << val << " != " << correctResult << std::endl;
+            // std::cerr << "C[" << i << "] == " << val << " != " << correctResult << std::endl;
             resultCorrect = false;
         }
     }
