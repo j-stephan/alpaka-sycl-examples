@@ -178,7 +178,7 @@ auto main()
         Data const correctResult(pBufHostA[i] + pBufHostB[i]);
         if(val != correctResult)
         {
-            // std::cerr << "C[" << i << "] == " << val << " != " << correctResult << std::endl;
+            std::cerr << "C[" << i << "] == " << val << " != " << correctResult << std::endl;
             resultCorrect = false;
         }
     }
