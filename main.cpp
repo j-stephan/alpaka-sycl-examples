@@ -138,7 +138,7 @@ auto main()
     }
 
     // Allocate 3 buffers on the accelerator
-    using BufAcc = alpaka::mem::buf::Buf<DevAcc, Data, Dim, Idx>;
+    using BufAcc = alpaka::mem::buf::Buf<Acc, Data, Dim, Idx>;
     BufAcc bufAccA(alpaka::mem::buf::alloc<Data, Idx>(devAcc, extent));
     BufAcc bufAccB(alpaka::mem::buf::alloc<Data, Idx>(devAcc, extent));
     BufAcc bufAccC(alpaka::mem::buf::alloc<Data, Idx>(devAcc, extent));

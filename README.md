@@ -1,8 +1,8 @@
 # Prerequisites
 
 1. A working SYCL environment. This minimal example was tested with ComputeCpp
-   1.2.0 as well as the Intel SYCL compiler (commit 78d9957). Both were used
-   with with the Intel Graphics Compute Runtime for OpenCL.
+   1.2.0 as well as the Intel SYCL compiler. Both were used with the Intel
+   Graphics Compute Runtime for OpenCL.
 2. Alpaka with the experimental SYCL backend. Fetch it here:
    https://github.com/j-stephan/alpaka and switch to the `sycl` branch.
 3. Codeplay's ComputeCpp SDK. Fetch it here:
@@ -52,8 +52,5 @@ clang++ -std=c++17 -O3 \
 This should produce the following output:
 
 ```
-[SYCL] Allocated 493824 bytes.
-[SYCL] Allocated 493824 bytes.
-[SYCL] Allocated 493824 bytes.
 Execution results correct!
 ```
